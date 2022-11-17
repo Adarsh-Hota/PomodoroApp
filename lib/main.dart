@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
 import 'package:pomodoro_app/pomodoro_screen.dart';
 import 'package:pomodoro_app/timer_service.dart';
-import 'package:provider/provider.dart';
 
 void main() {
   runApp(ChangeNotifierProvider<TimeService>(
     create: (_) => TimeService(),
-    child: MyApp(),
+    child: const MyApp(),
   ));
 }
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: PomodoroScreen(),
     );

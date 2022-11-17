@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
 import 'package:pomodoro_app/pomodoro_page/progress_widget.dart';
 import 'package:pomodoro_app/pomodoro_page/time_controller.dart';
 import 'package:pomodoro_app/pomodoro_page/timer_options.dart';
 import 'package:pomodoro_app/pomodoro_page/timer_cards_section.dart';
 import 'package:pomodoro_app/timer_service.dart';
 import 'package:pomodoro_app/utils.dart';
-import 'package:provider/provider.dart';
 
 class PomodoroScreen extends StatelessWidget {
   const PomodoroScreen({Key? key}) : super(key: key);
@@ -43,21 +44,23 @@ class PomodoroScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Container(
           alignment: Alignment.center,
-          child: Column(children: [
-            TimerCard(),
-            const SizedBox(
-              height: 40,
-            ),
-            TimerOptions(),
-            const SizedBox(
-              height: 40,
-            ),
-            TimeController(),
-            const SizedBox(
-              height: 30,
-            ),
-            ProgressWidget(),
-          ]),
+          child: Column(
+            children: const [
+              TimerCard(),
+              SizedBox(
+                height: 40,
+              ),
+              TimerOptions(),
+              SizedBox(
+                height: 40,
+              ),
+              TimeController(),
+              SizedBox(
+                height: 30,
+              ),
+              ProgressWidget(),
+            ],
+          ),
         ),
       ),
     );

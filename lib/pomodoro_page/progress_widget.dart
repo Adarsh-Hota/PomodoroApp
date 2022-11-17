@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pomodoro_app/utils.dart';
 import 'package:provider/provider.dart';
+
 import 'package:pomodoro_app/timer_service.dart';
+import 'package:pomodoro_app/utils.dart';
 
 class ProgressWidget extends StatelessWidget {
   const ProgressWidget({Key? key}) : super(key: key);

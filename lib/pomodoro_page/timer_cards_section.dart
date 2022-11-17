@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
 import 'package:pomodoro_app/timer_service.dart';
 import 'package:pomodoro_app/utils.dart';
-import 'package:provider/provider.dart';
 
 class TimerCard extends StatelessWidget {
   const TimerCard({Key? key}) : super(key: key);
@@ -91,7 +92,8 @@ class TimerCard extends StatelessWidget {
               child: Center(
                   child: Text(
                 seconds,
-                style: textStyle(70, renderColor(currentState), FontWeight.bold),
+                style:
+                    textStyle(70, renderColor(currentState), FontWeight.bold),
               )),
             ),
           ],
